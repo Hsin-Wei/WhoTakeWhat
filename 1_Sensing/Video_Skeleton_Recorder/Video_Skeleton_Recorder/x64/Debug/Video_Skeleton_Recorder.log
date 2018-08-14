@@ -1,0 +1,7 @@
+﻿  Video_Skeleton_Recorder.cpp
+c:\users\nctu\desktop\whotakewhat\1_sensing\video_skeleton_recorder\video_skeleton_recorder\video_skeleton_recorder.cpp(300): warning C4800: 'IMultiSourceFrameReader *': forcing value to bool 'true' or 'false' (performance warning)
+c:\users\nctu\desktop\whotakewhat\1_sensing\video_skeleton_recorder\video_skeleton_recorder\video_skeleton_recorder.cpp(326): warning C4305: 'return': truncation from 'int' to 'bool'
+c:\users\nctu\desktop\whotakewhat\1_sensing\video_skeleton_recorder\video_skeleton_recorder\video_skeleton_recorder.cpp(420): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\nctu\desktop\whotakewhat\1_sensing\video_skeleton_recorder\video_skeleton_recorder\video_skeleton_recorder.cpp(433): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Video_Skeleton_Recorder.vcxproj -> C:\Users\NCTU\Desktop\WhoTakeWhat\1_Sensing\Video_Skeleton_Recorder\x64\Debug\Video_Skeleton_Recorder.exe
+  Video_Skeleton_Recorder.vcxproj -> C:\Users\NCTU\Desktop\WhoTakeWhat\1_Sensing\Video_Skeleton_Recorder\x64\Debug\Video_Skeleton_Recorder.pdb (Full PDB)
