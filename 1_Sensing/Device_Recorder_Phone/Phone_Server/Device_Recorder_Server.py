@@ -31,5 +31,5 @@ def csv(name):
     return ""
 
 if __name__ == '__main__':
-    app.run(host='192.168.1.126', port=8889, debug=True) #Inner wifi
+    app.run(host='192.168.1.27', port=8889, debug=True) #Inner wifi
 #     app.run(host='192.168.50.124', port=8889, debug=True) #807 wifi
