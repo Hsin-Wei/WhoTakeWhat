@@ -5,6 +5,9 @@ import numpy as np
 from dtw import dtw
 from scipy.signal import savgol_filter
 import matplotlib.pyplot as plt
+from matplotlib import rc
+
+rc('mathtext', default='regular')
 
 # Algo.
 def VelocityCorrelation_earx(ro_raw_namedfs, obDe_df, obDe_all_split_index, camera_dire_forEarX):
@@ -125,13 +128,34 @@ def VelocityCorrelation_eary(ro_raw_namedfs, obDe_df, obDe_all_split_index, came
                 simAcc = dy
                 
                 #plot image
-                plt.plot(acc, label='Acc')
-                plt.plot(v, label='Velocity')
-                plt.plot(simV, label='Simulated Velocity')
-#                 plt.plot(simAcc, label='Simulated Acc')
-                plt.legend(loc='best')
-                plt.title(name)
-                plt.show() 
+#                 plt.plot(acc, label='Acc')
+#                 plt.plot(v, label='Velocity')
+#                 plt.plot(simV, label='Simulated Velocity')
+# #                 plt.plot(simAcc, label='Simulated Acc')
+#                 plt.legend(loc='best')
+#                 plt.title(name)
+#                 plt.show() 
+            
+                #plot image double y-axes
+                fig = plt.figure(figsize=(6,5))
+                plt.yticks(fontsize=14)
+                plt.xticks(fontsize=14)
+                ax = fig.add_subplot(111)
+                ax.plot(acc, '-C0', label = 'Acc')
+                ax2 = ax.twinx()
+                ax2.plot(v, '-C1', label = 'Velocity')
+                ax2.plot(simV, '-C2', label = 'Simulated Velocity')
+                ax.legend(loc='upper left',prop={'size': 14})
+                ax2.legend(loc='upper right',prop={'size': 14})
+#                 ax.grid()
+                ax.set_xlabel("Time slot", fontsize=16)
+                ax.set_ylabel(r"Acceleration ($m/s^2$)", fontsize=16)
+                ax2.set_ylabel(r"Velocity ($m/s$)", fontsize=16)
+#                 ax.yticks(fontsize=14)
+                plt.yticks(fontsize=14)
+                plt.xticks(fontsize=14)
+#                 plt.title(name)
+                plt.show()
 
                 acc_rs = acc.reshape(-1, 1)
                 v_rs = np.array(v).reshape(-1, 1)
